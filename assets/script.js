@@ -36,7 +36,7 @@ var questions = [
     var feedbackEl = document.querySelector("#feedback");
     var reStartBtn = document.querySelector("#restart");
     
-    // Quiz's initial state
+    // Quiz's starting state
     
     var currentQuestionIndex = 0;
     var time = questions.length * 15;
@@ -53,7 +53,11 @@ var questions = [
         getQuestion();
     }
     
-    // Loop through array of questions and answers and create list with buttons
+    // Start quiz
+    
+    startBtn.onclick = quizStart;
+
+    // Loop through questions and answers and create list with buttons
     
     function getQuestion() {
         var currentQuestion = questions[currentQuestionIndex];
@@ -116,37 +120,5 @@ var questions = [
           quizEnd();
         }
     }
-    
-    // Save score in local storage along with users' name
-    
-    function saveHighscore() {
-        var name = nameEl.value.trim();
-        if (name !== "") {
-          var highscores =
-            JSON.parse(window.localStorage.getItem("highscores")) || [];
-          var newScore = {
-            score: time,
-            name: name
-          };
-          highscores.push(newScore);
-          window.localStorage.setItem("highscores", JSON.stringify(highscores));
-        }
-    }
-    
-    // Save users' score
-    
-    function checkForEnter(event) {
-        if (event.key === "Enter") {
-            saveHighscore();
-        }
-    }
-    nameEl.onkeyup = checkForEnter;
-    
-    // Save users' score after clicking submit
-    
-    submitBtn.onclick = saveHighscore;
-    
-    // Start quiz after clicking start quiz
-    
-    startBtn.onclick = quizStart;
+
 
