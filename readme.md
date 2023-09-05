@@ -10,9 +10,7 @@ Creating code from scratch build a quiz that meets the below criteria:
 - When I have answered all questions or the timer hits zero, the quiz is over.
 I can save my initials and score when the quiz is over.
 
-![code quiz](./images/Screenshot.png)
 
-- Link to working URL: [Code Quiz](https://csmith0414.github.io/code-quiz/)
 
 ## Usage
 
