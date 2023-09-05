@@ -15,7 +15,17 @@ var questions = [
         prompt: "What statement is used within a function to set specified conditions?",
         options: ["if", "it", "as if", "because"],
         answer: "if"
-    }];
+    },
+    {
+      prompt: "What is the name of the program used in this course for repositories?",
+      options: ["GitHub","RepoBuilder","MyCode"],
+      answer: "GitHub"
+  },
+  {
+    prompt: "What is used to check is two values are completely equal to one another?",
+    options: ["=","==","==="],
+    answer: "==="
+}];
 
     var questionsEl = document.querySelector("#questions");
     var timerEl = document.querySelector("#timer");
@@ -68,10 +78,10 @@ var questions = [
             time = 0;
           }
           timerEl.textContent = time;
-          feedbackEl.textContent = `Wrong!`;
+          feedbackEl.textContent = "That is wrong!";
           feedbackEl.style.color = "red";
         } else {
-          feedbackEl.textContent = "Correct!";
+          feedbackEl.textContent = "That is right!";
           feedbackEl.style.color = "green";
         }
         feedbackEl.setAttribute("class", "feedback");

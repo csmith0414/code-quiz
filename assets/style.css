@@ -32,16 +32,16 @@ p {
 button {
   display: inline-block;
   margin: 10px;
-  cursor: pointer;
+  cursor: default;
   color: #fff;
-  background-color: #515052;
+  background-color: #0420f6;
   border-radius: 5px;
   border: 0;
   padding: 20px;
 }
 
 button:hover {
-  background-color: #9e99a1;
+  background-color: #4e6ff1;
 }
 
 .options button {
@@ -58,11 +58,11 @@ input[type="text"] {
 
 .feedback {
   font-style: bold;
-  font-size: 120%;
+  font-size: 150%;
   margin-top: 20px;
   padding-top: 15px;
   color: #fff;
-  border-top: 2px solid #4B0082;
+  border-top: 2px solid #000000;
 }
 
 ol {
@@ -74,10 +74,6 @@ ol {
 li {
   padding: 5px;
   list-style: decimal inside none;
-}
-
-li:nth-child(odd) {
-  background-color: #dfdae7;
 }
 
 /* This will be applied on any screen smaller than 768px */
