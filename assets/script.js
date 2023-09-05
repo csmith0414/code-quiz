@@ -123,7 +123,7 @@ var questions = [
         }
     }
     
-    // Save users' score after pressing enter
+    // Save users' score
     
     function checkForEnter(event) {
         if (event.key === "Enter") {
